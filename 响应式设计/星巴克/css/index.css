@@ -1,0 +1,311 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+#header{
+	height: 100px;
+	background: #fff;
+	display: -webkit-box;
+	width: 100%;
+/*	-webkit-box-shadow: 3px hoff voff #ccc color;
+	box-shadow: 3px hoff voff #ccc color;*/
+}
+
+#menu{
+	-webkit-box-flex:5;
+	padding: 30px 0 0 37px;
+	width: 0;
+}
+#menu img{
+	display: block;
+	
+}
+#menu span{
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	margin-left: 2px;
+}
+#logo{
+	-webkit-box-flex:2;
+	text-align: center;
+	padding: 5px 0;
+	width: 0;
+}
+#logo img{
+	width: 73px;
+}
+#login{
+	-webkit-box-flex:5;
+	text-align: right;
+	padding-right: 30px;
+	color: #4e4e4e;
+	font-size: 16px;
+	padding-top: 20px;
+	width: 0;
+}
+#login a{
+	color: #b89f7a;
+	font-weight: 700;
+	font-style: 14px;
+}
+#banner{
+	position: relative;
+}
+#banner img{
+	width: 100%;
+	display: block;
+}
+#banner span{
+	background:#b89f7a;
+	width:106px;
+	height:52px;
+	color: #fff;
+	text-align: center;
+	line-height: 52px;
+	display: block;
+	position: absolute;
+	right: 29%;
+	bottom: 15px;
+
+
+}
+#banner .banner2{
+	display: none;
+}
+#rewards-box{
+	background: #000;
+}
+#rewards{
+	width: 970px;
+	margin: 0 auto;
+	padding: 40px 0 50px 0;
+	overflow: hidden;
+}
+#rewards-mark{
+	width: 350px;
+	padding-left: 90px;
+	/*background: #f00;*/
+	float: left;
+}
+#rewards-mark p{
+	color: white;
+	font-size: 18px;
+	margin-top: 30px;
+}
+#rewards-content{
+	width: 430px;
+	/*background: #00f;*/
+	float: left;
+}
+ .con-title{
+	font-size: 25px;
+	color: #fff;
+	/*margin-top: 40px;*/
+}
+ .con-txt{
+	font-size: 16px;
+	color: #fff;
+}
+.con-btns{
+	margin-top: 15px;
+}
+ .con-btns .login-btn ,	.con-btns .register-btn{
+	width: 106px;
+	height: 46px;
+	border: 2px solid #a98e67;
+	color: #a98e67;
+	line-height: 46px;
+	text-align: center;
+	display: inline-block;
+ }
+.con-btns .login-btn:hover,.con-btns .register-btn:hover{
+    color: #fff;
+    background: #a98e67;
+}
+
+
+.con-btns .login-btn{
+    margin-right: 10px;
+}
+.con-btns .more-btn{
+    margin-left:30px;
+    color: #a98e67;
+    font-size: 14px;
+}
+#ice{
+	position: relative;
+}
+#ice img{
+	width: 100%;
+	display: block;
+}
+#ice span{
+	background:#b89f7a;
+	width:106px;
+	height:52px;
+	color: #fff;
+	text-align: center;
+	line-height: 52px;
+	display: block;
+	position: absolute;
+	right: 29%;
+	bottom: 15px;
+
+
+}
+#ice .ice2{
+	display: none;
+}
+#app{
+	background:  url("../img/app_bg.gif") 0 center repeat;
+	background-origin: border-box;
+}
+.app1{
+	overflow: hidden;
+}
+#app1-device{
+	float: left;
+	width: 35%;
+	height: 215px;
+	margin-top: 15px;
+	background: url("../img/app_device.png") center bottom no-repeat;
+	background-size: contain;
+}
+#app1-download{
+	float: left;
+	width:20% ;
+	margin-top: 15px;
+	text-align: center;
+}
+#app1-download img{
+	width: 130px;
+    height: 130px;
+}
+#app1-download .glyphicon{
+	font-size: 10px;
+}
+#app1-content{
+	float: left;
+	width: 35%;
+	margin-top: 45px;
+}
+#app1-content .a1{
+    font-size: 25px;
+    color: #3d3d3d;
+}
+#app1-content a{
+    color: #b89f7a;
+    font-size: 14px;
+}
+.app2{
+	display: none;
+	overflow: hidden;
+}
+#app2-content p{
+
+	width: 100%;
+	font-size: 18px;
+	text-align: center;
+	line-height: 28px;
+	margin: 25px;
+	color: #707070;
+}
+#app2-device{
+	float: left;
+	width: 40%;
+	height: 180px;
+	/*margin-top: 15px;*/
+	background: url("../img/app_device.png") center center no-repeat;
+	background-size: contain;
+}
+#app2-download{
+	width: 40%;
+	float: right;
+}
+				
+@media screen and (max-width: 991px){
+	#banner .banner1{
+		display: none;
+	}
+	#banner .banner2{
+		display: block;
+	}
+	#banner span{
+		bottom: 60px;
+		right: 15px;
+	}
+	#ice .ice1{
+		display: none;
+	}
+	#ice .ice2{
+		display: block;
+	}
+	#ice span{
+		bottom: 60px;
+		right: 15px;
+	}
+}
+@media screen and (max-width:767px){
+	#menu{
+		padding-left: 15px;
+	}
+	#login{
+		font-size: 12px;
+		padding-right: 10px;
+	}
+	#rewards{
+		width: 100%;
+	}
+	#rewards-mark,#rewards-content{
+		float: none;
+		width: 100%;
+	}
+	#rewards-mark{
+		padding-left: 0;
+		text-align: center;
+		margin-bottom: 50px;
+		
+	}
+	#rewards-mark img{
+		width: 160px;
+	}
+	#rewards-content{
+		text-align: center;
+	}
+	.con-btns .login-btn ,	.con-btns .register-btn, .con-btns .more-btn{
+	 	display: block;
+	}
+	.con-btns .login-btn ,	.con-btns .register-btn{
+		width: 70%;
+		margin: 0 auto;
+	}
+	.con-txt{
+		margin: 10px 0 30px 0;
+	}
+	.con-btns .registe-btn{
+		margin: 8px auto 20px;
+	}
+	.con-btns .more-btn{
+        text-align: right;
+        margin-right: 35px;
+    }
+    .app1{
+    	display: none;
+    }
+    .app2{
+    	display: block;
+    }
+ 
+
+}
+@media screen and (max-width:425px){
+	#login{
+	width: 0;
+	}
+	#login img{
+		width: 100%;
+	}
+}

@@ -1,0 +1,36 @@
+body{
+	background:#f00;
+}
+
+/*screen在电脑屏幕上看到*/
+@media screen and (max-width:768px){
+	body{
+		background: #0f0;
+	}
+}
+@media screen and (min-width:1200px){
+	body{
+		background: #00f;
+	}
+}
+/*要有空格*/
+
+
+/*print 打印机*/
+/*@media print {
+	body{
+		background: #00f;
+	}
+}*/
+/*设备水平时*/
+@media screen and (orientation:landscape){
+	body{
+		background: #ccc;
+	}
+}
+/*设备垂直时  默认垂直*/
+@media screen and (orientation:portrait){
+	body{
+		background: pink;
+	}
+}

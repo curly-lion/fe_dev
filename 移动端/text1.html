@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0
+		}
+		#div1{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<!-- web app  临时性入口 -->  
+	<div id="div1">
+	<!-- zepto.js轻量级	 -->
+	</div>
+	<script src="js/jquery.min.js" ></script>
+	<script src="js/jquery.mobile-1.4.5.js" ></script>
+	<script>
+		$('#div1').on('touchstart',function(){
+			console.log('touchstart');
+		})
+		$('#div1').on('touchmove',function(){
+			console.log('touchmove');
+		})
+		$('#div1').on('touched',function(){
+			console.log('touched');
+		})
+		$('#div1').on('click',function(){
+			console.log('click');
+		})
+		// click事件在touched事件后
+		// 为了区分单机还是双击 执行click会延迟300ms
+		$('#div1').on('tap',function(){
+		// 不会延迟
+		console.log('tap');
+		})
+
+		// swip滑就触发
+		$('#div1').on('swipeleft',function(){
+			// 左滑  >30px时触发事件
+			console.log('swipeleft')
+		})
+	</script>
+</body>
+</html>
