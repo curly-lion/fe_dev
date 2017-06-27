@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#div1{
+			width: 200px;
+			height: 100px;
+			background: #f00;
+			margin:100px;
+			-webkit-transform:rotate(30deg);
+			/*默认顺时针旋转  轴默认中心点*/
+			-webkit-transform-origin:(0,0);
+			/*旋转轴点*/
+
+			-webkit-transform:translate(30px，100px);
+			/*平移  水平  垂直*/
+			-webkit-transform:scale(2);
+			/*缩放倍数 */
+			-webkit-transform:skew(30deg,0deg);
+			/*扭曲度数*/
+		}
+		#div2{
+			width: 200px;
+			height: 200px;
+			margin:100px;
+			border: 5px dotted #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="div2">
+		<div id="div1">
+			sadadf
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+			}
+		ul,li{
+			list-style: none;
+			/*ul默认有.*/
+			}
+	
+		a{
+			text-decoration: none;
+			/*默认有下划线*/
+			}
+		img{
+			border: 0;
+			/*IE6有边框*/
+			}
+			#menu-box{
+				width: 200px;
+				border:1px solid #000;
+			}
+			#menu-box h3{
+				background:#000;
+				color: #fff;
+			}
+			#menu-box ul{
+				display: none;
+			}
+
+	</style>
+</head>
+<body>
+	<ul id="menu-box">
+		<li class="main-menu">
+			<h3 >管理区</h3>
+			<ul >
+				<li>001</li>
+				<li>002</li>
+				<li>003</li>
+			</ul>
+		</li>
+		<li class="main-menu">
+			<h3>交流区</h3>
+			<ul >
+				<li>001</li>
+				<li>002</li>
+				<li>003</li>
+			</ul>
+		</li>
+	</ul>
+	<!-- <script>
+		//找到元素然后绑定事件
+		function getClass(clsName,context){
+		var result = [];
+		context = context || document; 
+		var arr = context.getElementsByTagName('*')
+		for(var i=0;i<arr.length;i++){
+			if(arr[i].className.indexOf(clsName) != -1){
+				result.push(arr[i]);
+			}	
+		}
+		return result;
+		}
+		var oMenuBox = document.getElementById('menu-box');
+		var aLi = getClass('main-menu',oMenuBox);
+
+		for(i=0; i<aLi.length; i++){
+			//绑定点击事件
+			aLi[i].onclick = function(){
+				var oUl = this.getElementsByTagName('ul')[0];//除了Id以外都返回数组
+				//console.log(oUl.style.display);
+				// if(oUl.style.display == 'none'||oUl.style.display ==""){//.style 只能取到内联样式
+				// 	oUl.style.display = 'block';
+				// }else{
+				// 	oUl.style.display = 'none'
+				// }
+				//第一次点击会无反应要设置内联样式 或者加||==""
+				//法二
+				if(oUl.style.display == 'block'){//.style 只能取到内联样式
+					oUl.style.display = 'none';
+				}else{
+					oUl.style.display = 'block'
+				}
+
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+	</script> -->
+
+	<script>
+	//	节方法点的
+		function getClass(clsName,context){
+		var result = [];
+		context = context || document; 
+		var arr = context.getElementsByTagName('*')
+		for(var i=0;i<arr.length;i++){
+			if(arr[i].className.indexOf(clsName) != -1){
+				result.push(arr[i]);
+			}	
+		}
+		return result;
+		}
+		var oMenuBox = document.getElementById('menu-box');
+		var aLi = oMenuBox.children;
+		//var aLi = getClass('main-menu',oMenuBox);
+
+	for( var i=0;i<aLi.length;i++){
+		aLi[i].onclick = function(){
+		var oUl = this.children[1];
+			if(oUl.style.display == 'none'|| oUl.style.display ==""){
+				oUl.style.display ='block';
+			}else{
+				oUl.style.display = 'none';
+			}
+			
+			//console.log(this.index);
+			
+		}
+	}
+	//console.log(i);
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

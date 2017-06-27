@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;	
+		}
+		#div1{
+			width: 200px;
+			height: 200px;
+			background: #f00;
+			padding: 10px;
+			border: 5px solid #000;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+	var oDiv = document.getElementById('div1');
+	//console.log(oDiv.offsetWidth);//包括padding 包括border 不包括margin   即border以内   只能取值  不能赋值  style  只赋值  不取值
+	//console.log(oDiv.currentStyle.width);//IE语法  标准不支持
+	//console.log(getComputedStyle(oDiv,null).width);//Ie不支持 标准支持  带单位  只取width
+
+
+
+
+
+
+
+
+
+	//封装方法
+	function getStyle(elem,attr){
+		if(elem.currentStyle)//证明是IE  elem.currentStyle是undefined   chrome浏览器会返回undefined   访问undefined下属性时会报错  所以不写[attr]
+		{
+			return elem.currentStyle[attr];
+		}else{
+			//console.log('sda');
+			return getComputedStyle(elem,null)[attr];
+		}
+
+	}
+	 console.log(getStyle(oDiv,'width'));
+			
+	 //console.log(getComputedStyle(oDiv,null).width); 没问题
+</script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		#div1{
+			width: 200px;
+			height: 200px;
+			background: #f00;
+
+		}
+	</style>
+
+</head>
+<body>
+	<button id="btn1">hide</button>
+	<button id="btn2">show</button>
+	<button id="btn3">stop</button>
+
+	<div id="div1">
+		
+
+	</div>
+	<!-- ul>li{item$}*3 -->
+	<ul>
+		<li>item1</li>
+		<li class="aa">item2</li>
+		<li>item3</li>
+	</ul>
+
+	<ul>
+		<li>item1</li>
+		<li class="bb">item2</li>
+		<li>item3</li>
+	</ul>
+
+	<script src="jquery-1.12.4.js"> </script>
+	<script>
+		
+	// $('#btn1').on('click',function(){
+	// 	$('#div1').hide();
+	// })/隐藏/
+	// $('#btn2').on('click',function(){
+	// 	$('#div1').show(3000);
+	// })//显示
+	// $('#btn2').on('click',function(){
+	// 	$('#div1').toggle(3000);
+	// })//显示和隐藏交替
+	// $('#btn1').on('click',function(){
+	// 	$('#div1').fadeIn('slow');
+	// })//淡入
+	// $('#btn2').on('click',function(){
+	// 	$('#div1').fadeOut(3000);//淡r出
+	// })
+	// $('#btn1').on('click',function(){
+	// 	$('#div1').slideDown();
+	// })//滑下
+	// $('#btn2').on('click',function(){
+	// 	$('#div1').slideUp(3000);
+	// })//滑上
+
+	// $('#btn2').on('click',function(){
+	// 	$('#div1').animate({
+	// 		// width:800,
+	// 		width:'+=100',
+	// 		height:400
+	// 	},1000,function(){
+	// 		console.log("haha");
+
+	// 	// }).animate({
+	// 	// 	opacity:0.5
+	// 	});
+
+	// 	// $('#div1').animate({
+	// 	// 	opacity:0.5//透明度
+	// 	// })
+	// })
+
+
+		// $('#btn2').on('click',function(){
+		// $('#div1').animate({
+		// 	width:'+=100',
+		// 	height:400
+		// },1000);
+		// $('#div1').animate({
+		// 	opacity:0.2
+		// },1000);
+
+		// })
+
+
+		// $('#btn3').on('click',function(){
+		// 	$('#div1').stop(true,true);
+		// })
+
+		// var obj1 = {
+		// 	name:'lisi',
+		// 	age:13
+		// }
+		// var obj2 = {
+		// 	name:'zhangsan',
+		// 	school:'weichuang'
+		// }
+		// var obj3 = $.extend(obj1,obj2)//合并到同一个里
+
+		// console.log(obj3);//属性相同会替换 
+		// //$.inArray//是否在数组里
+
+		// var str = '    sdfds   sdfs  ';
+		// $.trim(str)//去掉首尾空格
+
+		// $('#div1'),get[0]//将jq对象转换成原生的
+
+		console.log($('aa').index());//输出兄弟索引
+		console.log($('bb').index());//bb在兄弟中索引
+
+		console.log($('.bb').index('li'));//当前元素在集合中的索引 
+		$('.bb').size()//返回长度
+
+
+
+	</script>
+
+
+
+</body>
+</html>

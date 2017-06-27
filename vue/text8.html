@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="app">
+	<input type="text" v-model="text" value="m"/>
+	<!-- value 后台传入数据 -->
+	<input type="radio" name="sex" v-model="sex" value="m" />男
+	<input type="radio" name="sex" v-model="sex" value="f" />男
+	
+	<!-- v-model看是不是一组 -->
+	<input type="checkbox" v-model="aa" value="1"/>1
+	<input type="checbox" v-model="aa" value="2" />2
+	<input type="checbox" v-model="aa" value="3" />3
+	<select name="" id="" v-model="sele">
+		<option value="aasa">1121</option>
+		<option value="aaca">1131</option>
+		<option value="aada">1141</option>
+	</select>
+
+</div>
+	<script src="vue.js"></script>
+	<script>
+		var vm = new Vue({
+		el:'#app',
+		data:{
+			text:'',
+			sex:'m',//默认值是  m   即 男
+			aa:[],
+			sele:'aasa',//默认值
+
+		},
+		
+	})
+	</script>
+</body>
+</html>

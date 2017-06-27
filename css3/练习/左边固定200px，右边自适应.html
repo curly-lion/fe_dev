@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/*法一*/
+	/*	#left{
+			width: 100px;
+			height: 100px;
+			background: red;
+			float: left;
+		}
+		#right{
+			height: 100px;
+			background: green;
+			margin-left: 110px;
+		}*/
+		/*法二*/
+		/*#content{
+			display: -webkit-box;
+		}
+		#left{
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin-right: 10px;
+
+		}
+		#right{
+			height: 100px;
+			background: green;
+			-webkit-box-flex:1;
+
+		}*/
+		#content{
+			display: -webkit-box;
+		}
+		#left{
+			width: 100px;
+			height: 100px;
+			float: left;
+			background: red;
+
+
+		}
+		#center{
+			height: 100px;
+			margin:0 110px;
+			background: #000;
+		}
+		#right{
+			width: 100px;
+			height: 100px;
+			background: green;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div id="left">
+			
+
+		</div>
+		<div id="right">
+			
+
+		</div>
+		<div id="center">
+			
+
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+提高代码运行速度和质量
+AMD 提前执行  rq.js  依赖的模块2.0开始支持延后    定义时就要加载引用
+
+CMD 延迟执行 sea.js  用时引用    
+
+
+
+ async defer 
+ defer IE浏览器语法  现在corom也支持
+等到dom结构加载完了  再执行  （可以保证文件执行顺序）
+async 标准浏览器语法 -->
+ <script src="js/1.js defer"></script>
+ <script src="js/text.js defer"></script>
+ 只要加载完了 就可以执行

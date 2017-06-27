@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+		<div id="app">
+		{{msg}}
+
+	</div>
+	<ul>
+		<li v-for="item in arr"  v-blind:class="{}" >
+			{{item}}
+			<!-- 引用item  连续刷新会出现  先显示页面上 再去除 用v-html“” v-text“” 替代 -->
+
+		</li>
+	</ul>
+	<input type="text" v-model="msg">
+	<script src="vue.js"></script>
+	<script>	
+		new Vue({
+			el:'#app'， 
+			   // 作用域#app  {}包裹是对象  固定el  ‘’中是选择器 vue2中规定不可以是body
+			data:{
+					msg:'sasa'
+					//属性  赋值 访问msg会返回‘sasa’
+					first:'asd'
+					last:'ds'
+				}
+			computed:{
+				fullName:function(){
+					return this.first
+				}//不写默认 get方法
+				fullName:{
+					set:function(){
+
+					},
+					get:function(){
+
+					}
+				}
+
+			}
+			methods:{
+				add:function(){
+
+				}
+			}	
+		});	 
+
+	</script>
+</body>
+</html>

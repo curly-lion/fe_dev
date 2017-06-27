@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+
+
+	<style>
+		#div1{
+			width:400px ;
+			height: 400px;
+			background: #fff;
+			position: relative;
+		}
+		#div1{
+			width:200px ;
+			height:200px ;
+			
+		}
+		#div3{
+			width: 200px;
+			height: 30px;
+			overflow: scroll;
+			/*出现滚动条*/
+		}
+
+
+
+	</style>
+</head>
+
+
+
+<body>
+	
+<div id="div1">
+	aaa
+	<div id="div2">
+		bbb
+	</div>
+</div>
+<div id="div3">
+	jhg地方看撒娇打卡机空间按客服卡拉技术开发将阿里会计师会计激发健康卡就卡机女女
+</div>
+<!-- <form action="post">
+你最喜欢的运动是？
+</br>
+
+<input type="checkbox" name="items" value="足球">足球
+<input type="checkbox" name="items" value="篮球">篮球
+<input type="checkbox" name="items" value="羽毛球">羽毛球
+<input type="checkbox" name="items" value="乒乓球">乒乓球
+</br>
+<input type="checkbox" name="ChecketAll" value="全选">全选
+<input type="checkbox" name="ChecketNo" value="全不选">全不选
+<input type="checkbox" name="ChecketRev" value="反选">反选
+
+<input type="butten" name="send" value="提交">
+
+
+
+</form> -->
+<!-- 属性checked是特性 -->
+<script src="jquery-1.12.4.js"> </script>
+<script>
+	// console.log(div1);
+	// //修改属性
+	// $('div1').attr('id','div2');//修改div
+	// $('div1').removeAttr('id','');//移除div
+	// $('#ChecketAll').on('click',function(){
+	// 	//$(':checkbox').attr('checked',true)//有问题
+	// 	$(':checkbox').prop('checked',true)//修改特性
+	// })
+	// $('#ChecketNo').on('click',function(){
+	// 	$(':checkbox').prop('checked',false)
+	// })
+	// $('#ChecketRev').on('click',function(){
+	// 	//$(':checkbox').prop('checked',true)
+	// 	$(':checkbox').each(function(index,elem){
+	// 		// console.log(index);//输出索引
+	// 		// console.log(elem);//输出原生
+	// 		elem.checked = !elem.checked;//y\原生代码   是原生对象
+
+	// 		//$(elem).prop('checked',!$(elem).prop('checked'));//jq
+
+	// 		//循环 从0到最后的索引
+	// 	})
+
+
+	// })
+
+
+
+	//console.log('#ChecketRev').val
+
+
+
+$('#div1').css('background','blue').css('border','1px soild #fff')
+// $('#div1').css({
+// 	background:'blue',
+// 	border:'1px soild #fff'
+// }).addClass('selected');//添加
+$('#div1').css({
+	background:'blue',
+	border:'1px soild #fff'
+}).remove('selected');//移除
+
+//尺寸
+//.height()//取
+//.height(value)//赋值
+//位置
+console.log('$('#div2').offset().left')//输出left值
+console.log('$('#div2').position().left')//输出left值  相对于定位的父元素的位置
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

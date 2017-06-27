@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+		#div1{
+			width: 200px;
+			height: 200px;
+			background: #f00;
+		}
+</style>
+<!-- <script src="js/text.js"></script> -->
+<!-- 同步加载 阻塞 -->
+<script src="js/text.js" async></script>
+<!-- 异步加载 不会阻塞下一步  标准浏览器 -->
+<!-- <script src="js/text.js defer"></script> -->
+<!-- 异步 -->
+
+<!-- async defer -->
+<!-- defer IE浏览器语法  现在corom也支持
+等到dom结构加载完了  再执行  （可以保证文件执行顺序）
+async 标准浏览器语法 -->
+<!-- <script src="js/1.js defer"></script> -->
+<!-- <script src="js/text.js defer"></script> -->
+<!-- 只要加载完了 就可以执行 -->
+<body>
+	<!-- <script>
+		var script = document.createElement('script');
+		script.src="js/xx.js"
+		document.body.appendChild(script);
+	</script> -->
+	<div id="div1">
+		d
+	</div>
+</body>
+</html>

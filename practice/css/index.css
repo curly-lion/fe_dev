@@ -1,0 +1,255 @@
+/*banner开始*/
+#banner{
+	height: 356px;
+	background-color: #1f2123;
+	/*margin-top: 88px*/
+	/* 外边距合并问题*/
+	/*margin-top:88px;*/
+	/* 上内加外边距 无法解决*/
+	/* border-top:88px solid transparent;*/
+	/*加外边框 无法解决*/
+	padding-top:88px;
+	/*可以解决*/
+	/*position: relative;
+	top: 88px;*/
+	/*相对定位  ：相对初始位置定位  定位的元素会覆盖 不好*/
+}
+	/*#banner-bg{
+		height: 356px;
+		background:url();
+	} 背景图片方法*/
+#banner .banner-content{
+	width: 420px;
+	height:280px;
+	position: absolute;
+	right:0;
+	top: 50%;
+	margin-top: -140px;
+	text-align: center;
+	/*让子元素在父元素里水平居中 只对文本和行级元素有效
+	块级元素水平居中百分之50或margin-top*/
+}
+#banner .banner-content h1{
+	color: #fff;
+	height: 46px;
+	line-height: 46px;
+	font-size: 27px;
+}
+#banner .banner-content p{
+	color: #fff;
+	line-height: 25px;
+	text-align:right;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	}
+#banner .banner-content a{
+	display: inline-block;
+	color: #fff;
+	padding: 10px;
+	margin-right: 50px;
+}
+#banner .banner-content .chect-out{
+	background-color: #e5412d ;
+}
+#banner .banner-content .buy-now{
+	background-color: #e7e7e7;
+	color: #333333;
+	margin-right: 0;
+}
+/*#banner-bg{
+	height: 356px;
+	background: url(../img/front-home-banner.jpg) no-repeat;
+}*/
+
+/*banner结束*/
+/*Awesome开始*/
+#Awesome{
+	height: 100px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #efefef;
+	text-align:center;
+	line-height: 100px;
+/*水平对齐方式*/
+}
+#text-primary{
+	font-size: 26px;
+	color:#e5412d;
+	font-weight:bold;
+	font-family:'Roboto Slab', sans-serif;
+
+}
+#lion{
+	color: #4d4d4d;
+	font-size:26px;
+}
+#hidden-phone{
+	color: #ccc;
+	font-style: italic;
+}
+
+/*Awesome结束*/
+/*connent 开始*/
+
+
+#slogan{
+	background: #f4f4f4;
+	border:1px solid #efefef;
+	margin:15px auto;
+	padding:15px;
+	color: #7c7c7c;
+	font-family:'Roboto Slab', sans-serif;/*前面找不到找后面 都没有用系统默认 特殊字符要用引号*/
+
+}
+#text-features li{
+	width: 197px;
+	height:245x;
+	padding:15px;
+	margin-right: 15px;
+	border:1px solid #efefef;
+	float:left;
+	text-align: center;
+
+}
+#text-features li:last-child{
+	margin-right: 0;
+	width: 196px;
+	float: right;
+}
+#text-features .glyphicon{
+	font-size: 70px;
+	color: #e2e2e2;
+}
+#text-features h3{
+	font-family:'Roboto Slab', sans-serif;
+	font-size: 17.50px;
+	margin:10px 0 10px;
+	font-weight:  400;
+	color: #4d4d4d;
+}
+#text-features p{
+	color:#7c7c7c;
+	line-height: normal;
+	margin-bottom: 10px;
+}
+#text-features a{
+	color: #e5412d;
+}
+#follow-us{
+	height: 150px;
+	border: 1px solid #efefef;
+	text-align: center;
+	background-color: #f4f4f4;
+}
+#follow-us h3{/*h3是块级元素，没有居中，只是宽度和父元素一样，文字居中可以继承*/
+	font-size: 21px;
+	font-weight: 200px;
+	color: #7c7c7c;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+#follow-us{
+	overflow: hidden;
+
+}
+#follow-list li{
+	display: inline-block;
+	margin: 0px 15px 0px;
+}
+#follow-list li .glyphicon:hover{
+	color: #e5421d;
+}
+#follow-list li a:hover{
+	color: #e5421d;
+}
+#follow-list li .glyphicon{/*权重大*/
+	font-size: 50px;
+	color: #444444;
+	line-height: 50px;
+}
+#follow-list li a{
+	font-size: 12px;
+	color: #444444;
+}
+#follow-list .selected a{/*自身的选择器比继承的高*/
+	color: #e5421d;
+}
+#follow-list .selected .glyphicon{
+	color: #e5421d;
+}
+#chat{
+	font-size:24.5px;
+	color: #7c7c7c;
+	margin:25px;
+	
+}
+
+#chat .glyphicon{
+	font-size:27px;
+	color:#575655;
+}	
+
+#chat-list{ 
+	overflow: hidden;
+}
+#chat-list .person{
+	border: 1px solid #efefef;
+	padding: 15px;
+	width: 400px;
+	height:73px;
+	margin-bottom: 15px;
+}
+/*ie9开始*/
+#chat-list .person:nth-child(2n+1){
+	float: left;
+}
+#chat-list .person:nth-child(2n){
+	float: right;
+}
+#chat-list .glyphicon{
+	font-size: 32px;
+	float: left;
+}
+#chat-list p{
+	margin-left: 70px;
+	margin-bottom: 15px;
+}
+#chat-list a{
+	color: #e5421d;
+
+}
+
+/*connent结束*/
+/*footer开始*/
+#footer{
+	background-color: #1f2123;
+	height: 300px;
+}
+#footer .wrapper > div{
+
+
+}
+#footer .quick-links,#footer .blog{}
+#footer h3{}
+#footer .quick-links,#footer .blog li{}
+#footer .quick-links a{}
+#footer .about{
+	widows: 310px;
+}
+#footer .about p{
+	height: 
+	background
+	color
+	line-height
+	padding
+}
+
+#footer .blog{
+	widows: 230px;
+}
+#footer .contact{}
+#footer .contact li{}
+#footer .contact{}
+
+
+/*footer结束*/
+/*字体可以继承*/

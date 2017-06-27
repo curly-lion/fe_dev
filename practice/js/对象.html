@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 对象是一堆属性的集合
+		// 1、内置对象 Array,Boolean,Date,Math,Number,String,RegExp,Global,
+		// 2、自定义对象
+		// 3、Dom对象
+
+
+		//万物皆对象  
+		//自定义对象
+		// var cat = new Object();
+
+		// cat.name = 'mimi';//属性  直接赋值
+		// cat.age = 1;
+		// cat.eat = function(){
+		// 	console.log('mimi is eating');
+		// }
+		var cat = {
+			name : 'mimi',
+			age:1,
+			eat:function(){
+			console.log('mimi is eating');
+			}//无其他 不加， ;
+		}//对象直接量
+		console.log(cat.name);//输出
+
+		cat.eat();//调用方法
+
+	</script>
+</body>
+</html>

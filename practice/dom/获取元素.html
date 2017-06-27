@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5</title>
+</head>
+<body>
+<!-- <div  style="background: red;"id="div1"> --><!-- 内联样式 --><!-- style id是属性 -->
+	<!-- <ul>
+		<li>014</li>
+		<li>024</li>
+		<li>034</li>
+		<li>044</li>
+	</ul>
+ -->	<!-- 元素 标签 -->
+<!-- </div> -->
+<!-- 用js操作html标签时候 这些标签就是dom对象 研究属性和方法-->
+<!-- <script>
+	//dom document object model 文档 对象 模型
+	//var oDiv1 = document.getElementById('div1');//通过id获取元素
+
+	//console.log(oDiv1.id);//输出id
+	//console.log(oDiv1.style.background);//取背景颜色
+	//oDiv1.onclick = function(){
+		//alert('haha');
+	//}
+	//绑定点击事件 也叫方法
+</script> -->
+<div  id="div1"><!-- 内联样式 --><!-- style id是属性 -->
+	<ul id="ul1">
+		<li class="aa bb">014</li>
+		<li>024</li>
+		<li class="aa">034</li>
+		<li class="aa1">044</li>
+	</ul>
+	<!-- 元素 标签 -->
+	<ul >
+		<li class="aa">014</li>
+		<li>024</li>
+		<li class="aa">034</li>
+		<li>044</li>
+	</ul>
+</div>
+<script>
+		//获取页面上的东西
+		//o对象、 a数组
+	// var oDiv1 = document.getElementById('div1');//通过id获取元素
+	// oDiv1.style.background = 'yellow';//先取到div 然后给设置了颜色黄色
+	// var aLi = document.getElementsByTagName('li');//获取标签名字  多s 逢单词首字母大写
+	//给所有li设置绿色
+	//aLi.style.background = 'green';当你发现控制台没有出现想要的效果时要看是否有报错  此时bg时undefined  因为此时数组下面没有style属性 而本意是取出每一个li  aLi是数组 无法给数组设置属性 应该取每一个li设置
+	//for(var i=0;i<aLi.length;i++){
+		//aLi[i].style.background = 'green';
+	//}
+	//aLi[0].style.background = 'green';//序列为0的li变色
+	// for(var i=0;i<aLi.length;i++){
+	// 	aLi[i].style.background = 'green';
+	// }
+	// var oUl1 = document.getElementById('ul1');
+	// var aA = oUl1.getElementsByClassName('aa');
+	// for(var i=0; i<aA.length;i++){
+	// 	aA[i].style.background = 'red';
+	// }
+	//document 包括html
+
+
+
+
+
+
+
+
+
+	//getElementsByClassName  时dom3里的语法 在IE8以及以下不兼容  window7自带基本都是IE8
+	//封装一个方法 使IE8以下也支持
+	//方法开始 都是从document里找 
+	// function getClass(clsName){
+	// 	var result = [];
+	// 	var arr = document.getElementsByTagName('*');//找到所有的
+	// 	for(var i=0;i<arr.length;i++){
+	// 		if(arr[i].className == clsName){//class是保留字 取时候用className
+	// 			result.push(arr[i]);
+
+	// 		}
+			
+	// 	}
+
+
+	// 	return result;
+
+	// }
+
+	//方法结束
+	// var arr = getClass('aa');
+	// for(var i=0;i<arr.length;i++){
+	// 	arr[i].style.background = 'blue';
+	// }
+	// console.log(arr);
+	//方法开始 都是从contest容器里找 
+	// function getClass(clsName,context){  //第二个是容器
+	// 	var result = [];
+	// 	var arr = context.getElementsByTagName('*');//找到所有的
+	// 	for(var i=0;i<arr.length;i++){
+	// 		if(arr[i].className == clsName){//class是保留字 取时候用className
+	// 			result.push(arr[i]);
+
+	// 		}
+			
+	// 	}
+
+
+	// 	return result;
+
+	// }
+	// var oUl1 = document.getElementById('ul1');
+	// var arr = getClass('aa',oUl1);
+	// //方法结束
+	
+	
+	//方法开始 都是从contest容器里找 如果不传 则默认document
+	function getClass(clsName,context){  //第二个是容器
+		var result = [];
+		console.log(context);
+		//方法一// if(context == undefined){
+		// 	var arr = document.getElementsByTagName('*');//找到所有的
+		// }
+		// else{
+		// 	var arr = context.getElementsByTagName('*');//找到所有的
+		// }
+		//方法二
+		context = context || document; //给context重新赋值 或的关系 
+		var arr = context.getElementsByTagName('*')
+
+		for(var i=0;i<arr.length;i++){
+			// if(arr[i].className == clsName){//class是保留字 取时候用className
+			// 	result.push(arr[i]);//'aa bb'此时取不到
+			if(arr[i].className.indexOf(clsName) !=-1){
+				result.push(arr[i]);//'aa1'此时也被取到了  需要用到正则表达式才可以解决
+
+
+			}
+			
+		}
+
+
+		return result;
+
+	}
+	var oUl1 = document.getElementById('ul1');
+	var arr = getClass('aa',oUl1);//如果不传 则默认document
+	// //方法结束
+	for(var i=0;i<arr.length;i++){
+		arr[i].style.background = 'blue';
+	}
+	
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

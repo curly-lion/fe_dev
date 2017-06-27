@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+	aaaa
+	</div>
+	<ul id="ul1">
+		<li>1125</li>
+		<li>5434</li>
+		<li id="li3">5345</li>
+	</ul>
+	<a href="#">vvvv</a>
+	<!-- <p>sdasdada</p> -->
+	<!-- 元素节点 dom对象 属性节点 文本节点 文字 -->
+	<!-- <script>
+		// 取到根节点
+		// console.log(document.documentElement);
+		// console.log(document.document.body);
+		// console.log(document.document.head);//低版本浏览器不支持
+		//document.getElementsTagName('html')[0];
+		//document.getElementsTagName('head')[0];
+		//var oDiv = document.getElementById('div1');
+		//console.log(oDiv.nodeType);节点类型 元素节点是1 属性节点是2 文本节点是3
+		//console.log(oDiv.innerHTML);
+		//取到前面元素里面的内容 返回字符串
+		//console.log(oDiv.innerHTML);
+		//console.log(oDiv.firstChild);//取到节点下面的属性
+		//console.log(oDiv.firstChild.nodeType);//第一个子节点
+		//console.log(oDiv.lastChild.nodeType);//最后一个一个子节点
+		//var oUl1 = document.getElementById('ul1');
+		//console.log(oUl1.firstChild);//返回#text   取到了回车加一堆空格  这个语法只在IE下面正常 火狐和chrome都不对
+		//console.log(oUl1.firstElementChild);//IE8以下不支持
+		//取下一个兄弟节点  
+		//var oDiv = document.getElementById('div1');
+		//console.log(oDiv.nextSibling);//返回回车空格 取得文本节点不是元素节点
+		//console.log(oDiv.nextElementSibling);
+		//取前一个兄弟节点 previousSibling
+
+
+
+
+
+
+
+
+
+		
+	</script> -->
+
+
+
+
+	<script>
+		var oDiv = document.getElementById('div1');
+		var oLi = document.getElementById('li3');
+
+
+		//封装一个用法 让所有浏览器都可以正常运行
+		//方法一
+		// function next(elem){
+		// 	if(oDiv.nextElementSibling){
+		// 		return oDiv.nextElementSibling
+		// 	}else{
+		// 		return oDiv.nextSibling;
+		// 	}
+		// }
+		// console.log(next(oDiv));
+		//方法二
+		// function next(elem){
+		// 	do{
+		// 		elem = elem.nextSibling;
+		// 	}while( elem.nodeType != 1);
+		// 	return elem;
+		// }
+		// console.log(next(oDiv)); 
+		//当没有下一个兄弟节点是会出错 所以有如下方法
+		//无下一个兄弟节点
+		function next(elem){
+			do{
+				elem = elem.nextSibling;
+				//console.log(elem);
+			}while(elem && elem.nodeType != 1);//如果元素有效再判断后面
+			return elem;
+		}
+		// console.log(next(oli));
+		//找前面一个兄弟节点
+		function previous(elem){
+			do{
+				elem = elem.previousSibling;
+				
+			}while(elem && elem.nodeType != 1);//
+			return elem;
+		}
+		//第一个孩子
+		function first(elem){
+			elem = elem.firstChild;
+			if(elem && elem.nodeType !=1){
+				elem = next(elem);
+			}
+			return elem;
+			}
+			//无法实现 会找第一个孩子的孩子
+		// 	do{
+		// 		elem = elem.firstChild;
+				
+		// 	}while(elem && elem.nodeType != 1);
+		// 	return elem;
+		
+		
+		//最后一个孩子
+		function last(elem){
+			elem = elem.lastChild;
+			if(elem && elem.nodeType !=1){
+				elem = previous(elem);
+			}
+			return elem;
+			
+		}
+		var oUl1 = document.getElementById('ul1');
+		//console.log(oUl1.childNodes);//common是注释   childNodes是属性  chrome里有问题  返回布尔值
+		//console.log(oUl1.children);//获取所有元素节点
+		//console.log(oUl1.nodeName);//获取节点名  所有节点的都是 #text
+		//带（）的是方法 不带()是属性
+		//oUl1.appendChild(first(oUl1));//从内部后面插入第一个孩子  剪切粘贴
+		//oUl1.appendChild(first(oUl1).cloneNode(true));
+		//复制一份粘贴到后面
+		oUl1.removeChild(first(oUl1));
+		//删除一个节点
+		//replaceChild(newnode,oldnode)  替换节点
+		//insertBefore(newnode,refnode) 在某个节点前插入一个节点
+		//var aDiv = document.getElementsTagName('div');//返回数组 不是真正的数组  是一个节点列表
+		// aDiv.pop();
+		// console.log(aDiv);报错  无数组的方法
+
+		//创建一个元素
+
+		var oP = document.createElement('p');
+		//插在body内部最后面
+		document.body.appendChild(oP);
+		oP.innerHTML='dsf';
+		console.log(oP);
+
+	</script>
+</body>
+</html>

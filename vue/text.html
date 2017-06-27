@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<!-- <input type="text" v-model="aaa"/> -->
+		<!-- v-model 双向绑定 就是value中值绑定Vue中aaa 相互改变 -->
+		<!-- <span>{{aaa}}</sppanan> -->
+		<input type="text" id="txt"/>
+		<span id="sp"></span>
+
+	</div>
+	<script src="vue.js"></script>
+	<script>
+
+	//	原生的双向绑定
+	//访问器属性 obj.aa = 123
+	var obj = {};
+	Object.defineProperty(obj,'aaa',{
+		set:function(val){
+			console.log(val);
+			document.getElementById('sp').innerHTML = function(){
+				obj.aaa = this.value;
+			}
+			get:function(){
+				alert:(1220);
+			}
+		}
+	})
+
+			document.getElementById('txt').onkeyup = val;
+	te
+	//外侧操作  会调用方法
+	obj.aaa = 123;//同时调用了set方法
+
+
+
+		// var vm = new Vue({
+		// 	el:'#app'， 
+		// 	   // 作用域#app  {}包裹是对象  固定el  ‘’中是选择器 vue2中规定不可以是body
+		// 	data:{
+		// 			msg:'sasa',
+		// 			//属性  赋值 访问msg会返回‘sasa’
+		// 			aaa:''			
+		// 		}
+
+		// });	 
+
+	</script>
+</body>
+</html>

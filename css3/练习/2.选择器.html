@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+ <!-- 元素选择符
+ 	* 选中所有 
+	E 
+	#E  id选择器
+	.E  类选择器 -->
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	/*	#div1{
+			background: #f00;
+		}*/
+		/*都会选中*/
+		/*.aa{
+			background: #0f0;
+		}*/
+		/*id选择器比较快*/
+		/*.aa.bb{
+			background: #0f0;
+		}*/
+		/*多类选择器*/
+/*关系选择符
+	.E .F		后代选择器
+	.E > .F		子代选择器
+	.E + .F     后面紧挨着的一个兄弟
+	.E ~ .F     后面的所有兄弟*/
+		/*.aa .bb{
+			background: #0f0;
+		}
+
+		.aa > .bb{
+			background: #0f0;
+		}*/
+/*属性选择符
+	E[att]			选中标签下的具有某属性的
+	E[att="val"]	选中标签下某属性的值为val
+	E[att^="val"]	选中标签下某属性的值为以val开头
+	E[att^="val"]	选中标签下某属性的值为以val开头
+	E[att$="val"]	选中标签下某属性的值为以val结尾
+	E[att*="val"]	选中标签下某属性的值为包含val
+	E[att|="val"]	选中标签下某属性的值为val-
+*/
+/*伪类选择器*/ 
+/*E：first-child  选中第一个孩子*/
+	/*	#ul1 li:first-child{
+			background: #f00;
+		}*/
+/* 并不是ul1的而是li*/
+
+/*E:link{}		未访问的连接
+E:visited{}		已访问的连接
+E:hover{}		鼠标移动到链接上  有兼容问题早起IE只给	a加 后来的可以给别的加hover
+E:active{}		选定的链接
+E:focus{}		获取焦点
+E:not(val)		不包含选择器val的其他所有标签
+E:root{}		跟节点  在html中永远是html
+E:only-child	选中只有一个孩子的那个标签
+E:nth-child(1)	nth表示第几个 nth序号从1开始 ()里是几就第几个 2n+1是奇数 2n是偶数
+*/
+
+
+/*伪对象选择器*/
+/*#E::first-line*/
+/*为了便于区分  用:: 实际一个：两个：都一样*/
+
+/*区别  伪类真实存在  伪对象不存在*/
+		#div3{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+		#div3::first-line{
+			background: #f00;
+		}
+	</style>
+
+
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div1"></div>
+	<div class="aa"></div>
+	<div class="bb"></div>
+	<ul id="ul1">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<div id="div3">
+		hsjk上登记卡adkl ashflj akfia shf duoq whS D JAS KSJ D KASKd sjk  sasdf jksf khdf jkshj
+	</div>
+
+
+	<script>
+		var oDiv = document.getElementById('div1')
+		console.log(oDiv);
+		//只会选中第一个
+	</script>
+</body>
+</html>

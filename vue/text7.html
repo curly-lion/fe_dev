@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <div id="app"> -->
+		<!-- 真正的删除 以及重新加载页面 -->
+		<!-- <div v-if="show">
+			<template v-if="show"><h1>dad</h1>
+				<p>asdda</p> 
+			</template>
+			<p>sfdafazffffffffffffffff</p>
+				
+		</div> -->
+		<!-- v-else只能跟在v-if后面 -->
+		<!-- <div v-else>
+			<p>hjkghjghj</p>
+		</div> -->
+		<!-- 样式切换 显示or隐藏 -->
+		<!-- <div v-show="show">
+			<p>sassssssssssssssssssssssssss</p>
+		</div> -->
+	<!-- </div> -->
+
+
+	<input type="text" v-model="msg" @keyup.65="add">
+	<!-- 只有按键65 即a可以触发 -->
+	<!-- enter 13 type up delete span -->
+	<!-- shift ctrl alt  同时按这些功能键时执行 -->
+
+	<script src="vue.js"></script>
+
+	<script>
+		var vm = new Vue({
+		el:'#app',
+		data:{
+			//show=true
+			msg:''
+		},
+		methods:{
+			add:function(){
+
+			}
+		}
+		
+	})
+	</script>
+</body>
+</html>

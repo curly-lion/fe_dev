@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.red{
+			width: 200px;
+			height:200px;
+			background: #f00;
+		}
+		.font{
+			width: 200px;
+			height:200px;
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	
+	<!-- <button v-on:click="add">click</button> -->
+	<!-- <button v-on:click="msg++">click</button> -->
+	<!-- <div :id="aa"></div> -->
+	<!-- 动态指令v-blind： 简写 ： -->
+	<!-- style class -->
+	<!-- <div :class="{red:isRed,font:isFont}">saddd</div> -->
+	<!-- <div :class="classObj">saddd</div> -->
+	<!-- <div class="ccccc" :class="[classA,classB]">saddd</div> -->
+	<!-- 固定的class  ccc  会直接拼接 -->
+	<!-- <div :style="{color:colorStyle}">sadsa</div> -->
+	<!-- <div :style="styleObj">sadsa</div> -->
+	<div :style="[styleA,styleB]">sadsa</div>
+	<!-- <button @click="isred = !isred">click</button>
+	<div class="red:isRed"></div> -->
+</div>
+<script src="vue.js"></script>
+<script>
+	//var oDiv = document.getElementById('app');
+	var vm = new Vue({
+		el:'#app',
+		data:{
+			colorStyle:'red',
+			styleObj:{
+				color:'red',
+				'font-size':"40px"
+			},
+			styleA:{
+				color:'red',
+				background:'#efefef'
+
+			},
+			styleB:{
+				'font-size':'40px'
+			}
+			msg:0,
+			aa:'div1',
+			bb:'red',
+			isRed:true,
+			isFont:false,
+			classObj:{
+				red:true,
+				font:false
+			},
+			// 对象里不能有- 如font-size  如果必须有 ‘font-size’
+			classA:'red',
+			classB:''
+		},
+		methods:{
+			// add:function(){
+			// 	//alert(11);
+			// 	//vm.msg++;//可以
+			// 	this.msg++;//指当前Vue对象
+			// }
+			// show:function(){
+			// 	this.isRed=!this.isRed;
+			// }
+		}
+	});
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

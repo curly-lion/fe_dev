@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+		margin: 0;
+		padding:0;
+		}
+		ul,li{
+		list-style: none;
+		/*ul默认有.*/
+		}
+		a{
+		text-decoration: none;
+		/*默认有下划线*/
+		}
+		img{
+		border: 0;
+		/*IE6有边框*/
+		}
+		#div1{
+		
+		background: #fff;
+		
+		
+
+		}
+		#div1 div{
+			background: red;
+			margin-top: 20px;
+			width: 200px;
+		
+		}
+		#div2{
+		transition: width 2s ease;
+		
+		}
+		#div3{
+		transition: width 2s linear;
+		
+		}
+		#div4{
+		transition: width 2s ease-in;
+		
+		}
+		#div5{
+		transition: width 2s ease-out;
+		
+		}
+		#div1:hover div{
+		width: 400px;
+		
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="div1">
+		
+		<div id="div2">
+			222
+		</div>
+		<div id="div3">
+			223
+		</div>
+		<div id="div4">
+			224
+		</div>
+		<div id="div5">
+			225
+		</div>
+	</div>
+</body>
+</html>

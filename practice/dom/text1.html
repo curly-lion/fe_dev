@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//console.log("haha");
+		//window。onload 相当于页面初始化时 当页面中所有资源都加载完后才执行
+		window.onload = function(){
+		var oDiv1 = document.getElementById('div1');//Uncaught TypeError: Cannot read property 'style' of null
+		console.log(oDiv1);
+		//oDiv1.style.background = 'red';//text1.html:10 Uncaught TypeError: Cannot read property 'style' of null
+
+		//获取id元素取不到 返回null  代码从上向下执行  此时还没有div1
+		var aLi = document.getElementsByTagName('li');//获取不到元素时  返回空数组
+		console.log(aLi);
+		}
+	</script>
+
+</head>
+<body>
+	<div id="div1">
+		asd
+	</div>
+	<!-- <script>
+		var oDiv1 = document.getElementById('div1');
+		oDiv1.style.background = 'red';
+	</script>
+
+ -->
+	<ul>
+		<li>001</li>
+		<li>002</li>
+		<li>003</li>
+		<li>004</li>
+	</ul>
+	<!-- <script>//此时页面标签结构加载完就可以执行 不需要等待资源文件
+		var aLi = document.getElementsByTagName('li');
+		console.log(aLi);
+	</script> -->
+	<img src="www。baidu.com/ddd.jpg" alt=""><!-- 资源文件 -->
+ </body>
+</html>
+<!-- 所以通常把script放在body最下面 -->

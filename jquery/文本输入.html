@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+
+<style>
+	
+	.focus{
+		background: #fcc;
+		border: 1px solid #f00;
+	}
+</style>
+<body>
+
+<fieldset>
+		<legend>个人基本信息</legend>
+			<div>
+				<label  for="username">名称:</label>
+				<input id="username" type="text" value="名称" />
+			</div>
+            <div>
+				<label for="pass">密码:</label>
+				<input id="pass" type="password" value="密码" />
+			</div>
+            <div>
+				<label for="msg">详细信息:</label>
+				<textarea id="msg" rows="2" cols="20">详细信息</textarea>
+			</div>
+	</fieldset>
+	<script src="jquery-1.12.4.js"> </script>
+	<script>
+		
+		$(':input').on('focus',function(){
+			$(this).addClass('focus');
+			// .val('');//获得焦点
+			if(this.value == this.defaultValue){
+				this.value = '';//jq并不简单。鼠标获取焦点不是默认值不清空，
+
+			}
+		}).on('blur',function(){
+			$(this).removeClass('focus');
+			//.val(this.defaultValue);//失去交点//defaultValue 默认的Value值 初始是什么就是什么
+			if(!$(this).val()//取出其中值
+				){
+				$(this).val(this.defaultValue)
+			}//鼠标移开失去焦点不是默认值不清空
+
+
+
+		});
+	</script>
+	
+</body>
+</html>

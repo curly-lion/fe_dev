@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="app">
+
+	是否需要额外付费<input type="checkbox" @click="showFacility">
+	<ul>
+		<li v-for='a in arr'>
+		{{a.name}} ({{a.price}})
+		<input type="checkbox" v-model='facility' :value='a'> 
+	</li>
+	</ul>
+	订单费用信息
+	<ul>
+		<li v-for='obj in facility'>
+
+		{{obj.name}} ({{obj.price}})
+		</li>
+
+	</ul>
+	总金额:{{total}}
+</div>
+	<script src="vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				arr:[],
+				facility:[{name:'群里花园豪华形',price:'400'}]
+
+			},
+			computed:{
+				total:function(){
+					var num = 0;
+					this.facility.forEach(function(val){
+						num += parseInt(val.price);
+					})
+					return num;
+				}
+			},
+			methods:{
+				showFacility:function(){
+					if(event.target.checked){
+						this.arr = [{name:'沙发',price:'100'},{name:'',price:'100'},{name:'沙发g',price:'100'}]
+						// {name:'沙发g',price:'100'}  是value
+					}else{
+						this.arr.splice(0);
+						this.facility.splice(1);
+
+					}
+				}
+				// add:function(a){
+				// 	if(even.target.checked){
+					// buxing不行	
+				// 	}
+				// }
+
+			}
+		})
+	</script>
+</body>
+</html>

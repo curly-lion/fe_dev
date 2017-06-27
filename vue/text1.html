@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="app">
+	
+	<!-- <button v-on:click="add">click</button> -->
+	<!-- <button v-on:click="msg++">click</button> -->
+	<button @click="msg++">click</button>
+	当前点击次数{{msg}}
+</div>
+<script src="vue.js"></script>
+<script>
+	//var oDiv = document.getElementById('app');
+	var vm = new Vue({
+		el:'#app',
+		data:{
+			msg:0
+		},
+		methods:{
+			// add:function(){
+			// 	//alert(11);
+			// 	//vm.msg++;//可以
+			// 	this.msg++;//指当前Vue对象
+			// }
+		}
+	})
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

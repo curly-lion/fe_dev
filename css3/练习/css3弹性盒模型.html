@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#content{
+			height: 400px;
+			/*width: 1500px;*/
+			border: 2px solid #000;
+			display: -webkit-box;
+			/*父元素声明房子子元素可以分配*/
+		}
+		#content div{
+			/*width: 100px;*/
+			height: 100px;
+			-webkit-box-orient:vertical;
+			horizontal 水平  vertical 垂直 
+			
+		}
+		#div1{
+			-webkit-box-flex:2;
+			/*值为整数*/
+			background: #f00;
+		}
+		#div2{
+			-webkit-box-flex:1;
+			background: #0f0;
+			/*margin: 0 50px;*/
+		}
+		#div3{
+			/*-webkit-box-flex:3;*/
+			width: 500px
+			height:100px;
+			background: #00f;
+		}
+		#content #div3{
+
+		}
+	</style>
+</head>
+<body>
+
+	<div id="content">
+		<div id="div1">
+			
+		</div>
+		<div id="div2">
+		
+		</div>
+		<div id="div3">
+		
+		</div>
+	</div>
+	
+</body>
+</html>

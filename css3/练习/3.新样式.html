@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{
+			/*水平偏移  垂直偏移 阴影模糊度 颜色*/
+			-webkit-text-shadow:10px 10px 2px red;
+			-moz-text-shadow:10px 10px 2px red ;
+			-ms-text-shadow:10px 10px 2px red ;
+			-o-text-shadow:10px 10px 2px red ;
+			text-shadow:10px 10px 2px red ;
+			text-shadow:10px 10px 2px rgba(255,0,0,0.5) ;
+			/*透明度*/
+		}
+		#div2{
+			width: 100px;
+			height: 200px;
+			border:1px solid #000;
+			/*word-break: break-all;强制换行 */
+			overflow: hidden;
+			/*容器溢出隐藏*/
+			text-overflow: ellipsis;
+			/*文本多余变省略号*/
+			white-space: nowrap;
+			/*空白地方不换行*/
+
+			/*text-overflow: clip;
+			/*文本剪裁  多余裁掉*/
+			
+			/*引用字体*/
+			/*font-family: 'diyfont.ttf'*/
+
+		}
+
+
+
+
+		/*定义字体*/
+		/*@font-face{*/
+			/*只要改文件名字就可以*/
+			/*font-family: 'diyfont';*/
+			/*src: url('diyfont.eot'); /* IE9+ */
+			/*src: url('diyfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				 /*url('diyfont.woff') format('woff'), /* chrome、firefox */
+				/* url('diyfont.ttf') format('truetype'),*/ /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+				/* url('diyfont.svg#fontname') format('svg');*/ /* iOS 4.1- */	
+		/*}*/
+		#div3{
+			width: 200px;
+			height: 200px;
+			background: #f00;
+			border-radius: 50%;
+						
+		}
+		#div4{
+			box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.6)
+			/*水平偏移  垂直偏移 阴影模糊度 值 外延颜色*/
+
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		sdad
+	</div>
+	<div id="div2">
+		sadasdadcfadcasdaXSD
+	</div>
+	<div id="div3">
+		asda
+	</div>
+	<div id="div4">
+		sfdd
+	</div>
+</body>
+</html>

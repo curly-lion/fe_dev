@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{
+			width: 200px;
+			height: 200px;
+			background: #f00;
+			-webkit-animation:run 2s ease 1s forwards infinite;
+			/*最后一个是执行次数 无限执行*/
+			/*延迟是最开始延迟 后期不会延迟*/
+
+		}
+		@keyframes run{
+			50%{
+				width: 500px;
+			}
+			100%{
+				width: 100px;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

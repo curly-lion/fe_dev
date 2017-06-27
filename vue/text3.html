@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.red{
+			width: 200px;
+			height:200px;
+			background: #f00;
+		}
+		.font{
+			width: 200px;
+			height:200px;
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<!-- 循环v-for -->
+	<ul>
+		<!-- <li v-for="val in arr" v-html="val"></li> -->
+		<!-- <li v-for="(val,index) in arr">{{val}},{{aa}}</li> -->
+		<!-- <li v-for="(val,aa) in arr" v-text="val+','+aa"></li> -->
+		<!-- <li v-for="(val,key,bb) in arr">{{val}},{{key}},{{bb}}</li> -->
+		<!-- bb对应索引顺序 -->
+		<li v-for="n in 10">{{n}}</li>
+		<!-- v-html="val" 可以添加到两个标签中间  解析成html-->
+		<!-- v-text 也是  解析成文本 -->
+		<!-- {{val}}缺点 会在页面出现  执行再去掉 -->
+	</ul>
+	
+</div>
+<script src="vue.js"></script>
+<script>
+	var vm = new Vue({
+		el:'#app',
+		data:{
+			arr:[1,2,3,4,5,6],
+			obj:{
+				name:'lili',
+				age:22,
+				sex:'male female'
+			}
+			
+			},
+			
+		
+		methods:{
+			
+		}
+	});
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

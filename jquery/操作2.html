@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+</head>
+<body>
+
+	<div id="div1">
+		aa
+	</div>
+	<script src="jquery-1.12.4.js"> </script>
+
+	<script>
+		$('#div1').on('click',function(){
+			alert(44);
+		})
+		var $div2 = $('#div1').clon(true);
+		$('body').append('$div2');//克隆
+
+
+			//jq
+			$('#div1').wrap('<div class = "aa"></div>');
+			$('#div1').wrap('.aa');
+			$aa = $('.aa');
+			var oAa = document.getElementsByClassName('aa')[0];
+			$('#div1').wrap(oAa);
+			$("body").append('<div><p>sdas</p></div>');
+
+			//原生
+			var oDiv = document.createElement('div');
+			var oP = document.creatElement('p');
+			oP.innerHTML = 'sad';
+			oDiv.appendChild(oP);
+			document.body.appendChild(oDiv);
+
+
+
+			$('body').append($('#div1').clon());//不可以直接链式操作  插到内部后边
+			$('body').prepeng($('#div1').clon());//插入内部前边
+
+			$('#div1').clon().appendTo($('body'));//可以直接链式操作  注  一般不会进行id克隆 
+
+
+
+			console.log($('#div1').text('haha'));
+			$('#div1').html('<p>xzc</p>');//可以识别html语句
+			$('#div1').text('<p>xzc</p>');//无法识别html 会都当做text
+
+
+
+	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="http://www.baidu.com"></a>
+	<!-- a标签  默认跳到链接 -->
+	<!-- 阻止默认行为 -->
+	<script>
+		var oLink = document.getElementById('link');
+		oLink.onclick = function(e){
+			// e.preventDefault();  //标准
+			// e.returnValue = false;//ie
+
+			return false//最常用组织方法
+
+		}
+	</script>
+</body>
+</html>

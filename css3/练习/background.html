@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#div1{
+			width: 1500px;
+			height: 600px;
+			border: 50px solid rgba(0,0,0,0.5);
+			/*css3可设置多背景图片*/
+			background:  url(img/13.jpg) no-repeat  200px 200px,url(img/10.jpg) no-repeat;
+			/*背景色从padding开始*/
+			/*padding:10px;*/
+			/*background-origin: padding-box;*/
+			/*content-box*//*border-box*/ /*设置背景图开始位置  默认padding-box*/
+			/*-webkit-background-clip: text;*/
+			/*背景裁切  border-box  padding-box connent-box text*/
+			/*font-size:150px;*/
+			/*color: transparent;*/
+			
+			/*背景图片大小*/
+			/*-webkit-background-size: 50%;
+			-webkit-background-size:50%;
+			-moz-background-size:50% ;
+			-ms-background-size:50% ;
+			-o-background-size:50%;
+			background-size:50% ;*/
+		/*	属性 
+			contain  包含   放大直到一边接触到容器一边 可能覆盖不到容器 图片不会出去  
+			cover 覆盖   放大直到两边都包含 图片有可能超出*/
+			
+			/*镜像渐变 圆   线像渐变 直线均匀*/
+
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="div1">
+		
+		啦啦啦
+	</div>
+</body>
+</html>

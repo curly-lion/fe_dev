@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+
+	//创建一个类  把属性写类中  方法写原型prototype中
+
+	
+		//类；具有相同属性和方法的对象的集合
+
+		// var fn =  function(){
+		// 	 	console.log(this.name+'is eating')
+		// 	}
+		function Person(name.age){//类  = 构造函数
+			this.name = name;
+			this.age = age;
+			// this.eat = function(){//底层调用时是new了一个function 相当于每次var都创建
+			// 	console.log(this.name+'is eating')
+			// }
+//			this.eat = fn ;
+
+		}
+//属性写在类中  方法写在原型prototype中
+		Person.prototype.eat = function(){
+			 	console.log(this.name+'is eating')
+			}//专门添加类的方法   prototype原型
+		var person1 = new Person('lili',10);//new出来的是对象 代表类的实例 本例中代表一个人
+
+		console.log(person1.name)//带有类中已定义的属性
+
+		var person2 = new Person('lily',20);
+
+		person1.name = 'haha';
+
+		person1.eat();
+		//规定 大写代表类
+	</script>
+</body>
+</html>
