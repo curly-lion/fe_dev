@@ -1,0 +1,75 @@
+#content{
+	padding:88px;
+}
+#content .title{
+	padding: 15px 0;
+	color: #7c7c7c;
+	line-height: 30px;
+	height: 30px;
+
+ }
+ #content .title .glyphicon{
+	font-size: 27px;
+	line-height: 30px;
+}
+ #content .title .company{
+    font-size:50%;
+    /*相对于父元素中字体大小*/
+	color: #afafaf;
+	font-style: italic;
+	vertical-align: middle;
+	/*解决了垂直居中和行高高一起，本意解决左右两边两个行级元素顶端对其*/
+}
+#content .title {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 400;
+}
+#slogan{
+	background: #f4f4f4;
+	height: 30px;
+	line-height:30;
+	padding: 15px;
+	border:1px solid #;
+	text-align: center;
+	font-size:21px;
+	color:#7c7c7c ;
+
+}
+#user-list>li{
+	width: 300px;
+	height: 343px;
+	padding: 4px;
+	border: 1px solid #ddd;
+	float: left;
+}
+#user-list{
+	overflow: hidden;
+}
+#user-list >li>img{
+	width: 200px;
+	height: 200px;
+}
+#user-list >h3{
+	font-family: 'Roboto Slab', sans-serif; ;
+	margin: ;
+	font-weight: 400;
+	color:#4d4d4d;
+	padding:;
+	font-size :;
+
+}
+#user-list p{
+	font-family: 'Roboto Slab', sans-serif; ;
+	font-size:;
+	color:#797979;
+	padding:0 10px 10px;
+}
+.separator{
+	height: 2px;
+	background: #f4f4f4; 
+	text-align: center;
+}
+.separator.glyphicon{
+	
+}
+/*结束*/
